@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AllClasses">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="AllClasses\itti">
+      <UniqueIdentifier>{0d3243de-aed2-4d1d-adac-a0877e65436b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\SR">
+      <UniqueIdentifier>{d88d4990-bdb0-45f9-87c0-d556ba2fdce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\Rudinac">
+      <UniqueIdentifier>{e05a9b80-000e-4d53-9904-ec24899113a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\GMR">
+      <UniqueIdentifier>{e171dfae-22f6-4b34-8a2e-1c3bd7d54b51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\FT">
+      <UniqueIdentifier>{22d027a0-80d5-40be-bf44-fc7845ee8b3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\RC">
+      <UniqueIdentifier>{6bd93fbb-a6e1-44ea-a25b-46a328919e14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\LC">
+      <UniqueIdentifier>{af0fc02b-0bbf-4532-adfd-fbb089a89451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\HC">
+      <UniqueIdentifier>{15823774-6ee4-4629-ba80-b90f299f7085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\RC\Segmentation">
+      <UniqueIdentifier>{68908230-dce9-426a-b167-0e31830b3f51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\MBP">
+      <UniqueIdentifier>{e2c3cd06-5c31-4921-8844-9d0ad29b721a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\AC">
+      <UniqueIdentifier>{94b920d2-4dd4-4367-abaa-ec33a4ef45cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\MSS">
+      <UniqueIdentifier>{0f3accad-dae3-4b37-a127-b07709d1936c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="AllClasses\PHOT">
+      <UniqueIdentifier>{469924a1-fdf7-42ac-b2e8-2e5e12498cf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\BMS">
+      <UniqueIdentifier>{f2edea44-06b5-4d0c-a869-c459a37d6096}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AllClasses\SF">
+      <UniqueIdentifier>{31e72514-045c-4f73-a46d-2a2987cdaded}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="itti\gabor.cpp">
+      <Filter>AllClasses\itti</Filter>
+    </ClCompile>
+    <ClCompile Include="itti\itti.cpp">
+      <Filter>AllClasses\itti</Filter>
+    </ClCompile>
+    <ClCompile Include="Rudinac\saliencyDetectionRudinac.cpp">
+      <Filter>AllClasses\Rudinac</Filter>
+    </ClCompile>
+    <ClCompile Include="SR\SR.cpp">
+      <Filter>AllClasses\SR</Filter>
+    </ClCompile>
+    <ClCompile Include="GMR\SLIC.cpp">
+      <Filter>AllClasses\GMR</Filter>
+    </ClCompile>
+    <ClCompile Include="GMR\GMR.cpp">
+      <Filter>AllClasses\GMR</Filter>
+    </ClCompile>
+    <ClCompile Include="FT\FT.cpp">
+      <Filter>AllClasses\FT</Filter>
+    </ClCompile>
+    <ClCompile Include="LC\LC.cpp">
+      <Filter>AllClasses\LC</Filter>
+    </ClCompile>
+    <ClCompile Include="HC\HC.cpp">
+      <Filter>AllClasses\HC</Filter>
+    </ClCompile>
+    <ClCompile Include="RC\RC.cpp">
+      <Filter>AllClasses\RC</Filter>
+    </ClCompile>
+    <ClCompile Include="RC\Segmentation\segment-image.cpp">
+      <Filter>AllClasses\RC\Segmentation</Filter>
+    </ClCompile>
+    <ClCompile Include="MBP\MBP.cpp">
+      <Filter>AllClasses\MBP</Filter>
+    </ClCompile>
+    <ClCompile Include="AC\AC.cpp">
+      <Filter>AllClasses\AC</Filter>
+    </ClCompile>
+    <ClCompile Include="MSS\MSS.cpp">
+      <Filter>AllClasses\MSS</Filter>
+    </ClCompile>
+    <ClCompile Include="PHOT\PHOT.cpp">
+      <Filter>AllClasses\PHOT</Filter>
+    </ClCompile>
+    <ClCompile Include="BMS\BMS.cpp">
+      <Filter>AllClasses\BMS</Filter>
+    </ClCompile>
+    <ClCompile Include="SF\filter\filter.cpp">
+      <Filter>AllClasses\SF</Filter>
+    </ClCompile>
+    <ClCompile Include="SF\filter\permutohedral.cpp">
+      <Filter>AllClasses\SF</Filter>
+    </ClCompile>
+    <ClCompile Include="SF\superpixel\superpixel.cpp">
+      <Filter>AllClasses\SF</Filter>
+    </ClCompile>
+    <ClCompile Include="SF\SF.cpp">
+      <Filter>AllClasses\SF</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoRunDatasets.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="itti\Itti.h">
+      <Filter>AllClasses\itti</Filter>
+    </ClInclude>
+    <ClInclude Include="itti\cvgabor.h">
+      <Filter>AllClasses\itti</Filter>
+    </ClInclude>
+    <ClInclude Include="SR\SR.h">
+      <Filter>AllClasses\SR</Filter>
+    </ClInclude>
+    <ClInclude Include="Rudinac\Rudinac.h">
+      <Filter>AllClasses\Rudinac</Filter>
+    </ClInclude>
+    <ClInclude Include="GMR\SLIC.h">
+      <Filter>AllClasses\GMR</Filter>
+    </ClInclude>
+    <ClInclude Include="GMR\GMR.h">
+      <Filter>AllClasses\GMR</Filter>
+    </ClInclude>
+    <ClInclude Include="FT\FT.h">
+      <Filter>AllClasses\FT</Filter>
+    </ClInclude>
+    <ClInclude Include="LC\LC.h">
+      <Filter>AllClasses\LC</Filter>
+    </ClInclude>
+    <ClInclude Include="HC\HC.h">
+      <Filter>AllClasses\HC</Filter>
+    </ClInclude>
+    <ClInclude Include="RC\RC.h">
+      <Filter>AllClasses\RC</Filter>
+    </ClInclude>
+    <ClInclude Include="RC\Segmentation\disjoint-set.h">
+      <Filter>AllClasses\RC\Segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="RC\Segmentation\segment-graph.h">
+      <Filter>AllClasses\RC\Segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="RC\Segmentation\segment-image.h">
+      <Filter>AllClasses\RC\Segmentation</Filter>
+    </ClInclude>
+    <ClInclude Include="MBP\MBP.hpp">
+      <Filter>AllClasses\MBP</Filter>
+    </ClInclude>
+    <ClInclude Include="AC\AC.h">
+      <Filter>AllClasses\AC</Filter>
+    </ClInclude>
+    <ClInclude Include="MSS\MSS.h">
+      <Filter>AllClasses\MSS</Filter>
+    </ClInclude>
+    <ClInclude Include="PHOT\PHOT.h">
+      <Filter>AllClasses\PHOT</Filter>
+    </ClInclude>
+    <ClInclude Include="BMS\BMS.h">
+      <Filter>AllClasses\BMS</Filter>
+    </ClInclude>
+    <ClInclude Include="SF\filter\filter.h">
+      <Filter>AllClasses\SF</Filter>
+    </ClInclude>
+    <ClInclude Include="SF\filter\permutohedral.h">
+      <Filter>AllClasses\SF</Filter>
+    </ClInclude>
+    <ClInclude Include="SF\superpixel\superpixel.h">
+      <Filter>AllClasses\SF</Filter>
+    </ClInclude>
+    <ClInclude Include="SF\fastmath.h">
+      <Filter>AllClasses\SF</Filter>
+    </ClInclude>
+    <ClInclude Include="SF\SF.h">
+      <Filter>AllClasses\SF</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
