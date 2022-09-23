@@ -5,12 +5,15 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui/highgui.hpp"
-#include<math.h>
+#include <math.h>
 #include <opencv2/opencv.hpp>
 #include <fstream>
 #include <vector>
 #include <time.h>
-#include<algorithm>
+#include <algorithm>
+
+
+
 void ITTI::calculateSaliencyMap(const Mat* src, Mat* dst, int corlor, int scaleBase)
 {
 	createChannels(src);//Create a pyramid for 9 layers.The top is same as src img
@@ -181,7 +184,10 @@ void ITTI::createOrientationFeatureMaps(int orientation)
 		Mat fineScaleImage = gaussianPyramid_I.at(c[scaleIndex]);
 		Size fineScaleImageSize = fineScaleImage.size();
 
-		IplImage src_fineScaleImage = IplImage(fineScaleImage);
+		//IplImage src_fineScaleImage = IplImage(fineScaleImage);
+		//IplImage src_fineScaleImage = cvarrToMat(fineScaleImage);
+		IplImage src_fineScaleImage = cvIplImage(fineScaleImage);
+
 		gbr_fineScaleImage = cvCreateImage(fineScaleImage.size(), IPL_DEPTH_8U, 1);
 		gabor->conv_img(&src_fineScaleImage, gbr_fineScaleImage, CV_GABOR_REAL);
 		Mat src_responseImg = cvarrToMat(gbr_fineScaleImage);
