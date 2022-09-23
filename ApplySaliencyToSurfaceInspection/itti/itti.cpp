@@ -5,12 +5,15 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "opencv2/imgcodecs.hpp"
 #include "opencv2/highgui/highgui.hpp"
-#include<math.h>
+#include <math.h>
 #include <opencv2/opencv.hpp>
 #include <fstream>
 #include <vector>
 #include <time.h>
-#include<algorithm>
+#include <algorithm>
+
+
+
 void ITTI::calculateSaliencyMap(const Mat* src, Mat* dst, int corlor, int scaleBase)
 {
 	createChannels(src);//Create a pyramid for 9 layers.The top is same as src img
@@ -175,14 +178,22 @@ void ITTI::createOrientationFeatureMaps(int orientation)
 	int delta[2] = { 3, 4 };
 	CvGabor *gabor = new CvGabor(orientation, 0);
 	IplImage* gbr_fineScaleImage, *gbr_coarseScaleImage;
+	
+	CvSize sizeTemp;
 
 	for (int scaleIndex = 0; scaleIndex < fineScaleNumber; scaleIndex++)
 	{
 		Mat fineScaleImage = gaussianPyramid_I.at(c[scaleIndex]);
 		Size fineScaleImageSize = fineScaleImage.size();
 
-		IplImage src_fineScaleImage = IplImage(fineScaleImage);
-		gbr_fineScaleImage = cvCreateImage(fineScaleImage.size(), IPL_DEPTH_8U, 1);
+		//IplImage src_fineScaleImage = IplImage(fineScaleImage);
+		//IplImage src_fineScaleImage = cvarrToMat(fineScaleImage);
+		IplImage src_fineScaleImage = cvIplImage(fineScaleImage);
+
+		sizeTemp.width = fineScaleImage.cols; sizeTemp.height = fineScaleImage.rows;
+		//gbr_fineScaleImage = cvCreateImage(src_fineScaleImage..size(), IPL_DEPTH_8U, 1);
+		gbr_fineScaleImage = cvCreateImage(sizeTemp, IPL_DEPTH_8U, 1);
+
 		gabor->conv_img(&src_fineScaleImage, gbr_fineScaleImage, CV_GABOR_REAL);
 		Mat src_responseImg = cvarrToMat(gbr_fineScaleImage);
 
@@ -190,8 +201,13 @@ void ITTI::createOrientationFeatureMaps(int orientation)
 		{
 			int s = c[scaleIndex] + delta[scaleDiffIndex];
 			Mat coarseScaleImage = gaussianPyramid_I.at(s);
-			IplImage src_coarseScaleImage = IplImage(coarseScaleImage);
-			gbr_coarseScaleImage = cvCreateImage(coarseScaleImage.size(), IPL_DEPTH_8U, 1);
+			//IplImage src_coarseScaleImage = IplImage(coarseScaleImage);
+			IplImage src_coarseScaleImage = cvIplImage(coarseScaleImage);
+
+			//gbr_coarseScaleImage = cvCreateImage(coarseScaleImage.size(), IPL_DEPTH_8U, 1);
+			sizeTemp.width = coarseScaleImage.cols; sizeTemp.height = coarseScaleImage.rows;
+			gbr_coarseScaleImage = cvCreateImage(sizeTemp, IPL_DEPTH_8U, 1);
+
 			gabor->conv_img(&src_coarseScaleImage, gbr_coarseScaleImage, CV_GABOR_REAL);
 			Mat coarse_responseImg = cvarrToMat(gbr_coarseScaleImage);
 
