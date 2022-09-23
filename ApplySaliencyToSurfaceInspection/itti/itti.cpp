@@ -188,7 +188,10 @@ void ITTI::createOrientationFeatureMaps(int orientation)
 		//IplImage src_fineScaleImage = cvarrToMat(fineScaleImage);
 		IplImage src_fineScaleImage = cvIplImage(fineScaleImage);
 
-		gbr_fineScaleImage = cvCreateImage(fineScaleImage.size(), IPL_DEPTH_8U, 1);
+		CvSize sizeTemp; sizeTemp.width = fineScaleImage.cols; sizeTemp.height = fineScaleImage.rows;
+		//gbr_fineScaleImage = cvCreateImage(src_fineScaleImage..size(), IPL_DEPTH_8U, 1);
+		gbr_fineScaleImage = cvCreateImage(sizeTemp, IPL_DEPTH_8U, 1);
+
 		gabor->conv_img(&src_fineScaleImage, gbr_fineScaleImage, CV_GABOR_REAL);
 		Mat src_responseImg = cvarrToMat(gbr_fineScaleImage);
 
